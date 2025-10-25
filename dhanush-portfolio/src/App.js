@@ -49,7 +49,12 @@ const Portfolio = () => {
       location: "Mumbai, Maharashtra, India",
       address: "B 801 Joy Homes, Opposite Ishwar Nagar, LBS Marg Bhandup (W), Mumbai 400078"
     },
-    about: "Passionate Software Engineer specializing in Generative AI and Machine Learning with proven expertise in building scalable, context-aware conversational AI systems. Currently working at Navikenz, I've successfully deployed multiple GenAI solutions and created innovative AI-powered tools that significantly improve automation and user engagement.",
+    about: [
+      "Passionate Software Engineer specializing in Generative AI and Machine Learning",
+      "Proven expertise in building scalable, context-aware conversational AI systems",
+      "Currently working at Navikenz with successful deployment of multiple GenAI solutions",
+      "Created innovative AI-powered tools that significantly improve automation and user engagement"
+    ],
     experience: [
       {
         company: "Navikenz, Bangalore",
@@ -71,19 +76,37 @@ const Portfolio = () => {
         projects: [
           {
             name: "GenBI",
-            desc: "Developed an intelligent business intelligence platform that analyzed datasets and automatically generated charts and graphs based on user prompts or autonomous data understanding, enabling dynamic data visualization through natural language processing"
+            desc: [
+              "Developed intelligent business intelligence platform for automatic chart and graph generation",
+              "Analyzed datasets and generated visualizations based on user prompts or autonomous data understanding",
+              "Enabled dynamic data visualization through natural language processing"
+            ]
           },
           {
             name: "VFS POC",
-            desc: "Developed a RAG-based chatbot for VFS Global to automate the e-visa on arrival process, reducing manual workflows by eliminating multiple steps including manual visa form filling and streamlining the entire application procedure"
+            desc: [
+              "Developed RAG-based chatbot for VFS Global to automate e-visa on arrival process",
+              "Reduced manual workflows by eliminating multiple steps including manual visa form filling",
+              "Streamlined the entire application procedure"
+            ]
           },
           {
             name: "Naviflow",
-            desc: "Engineered a no-code agent platform that empowers users to build RAG-based applications through intuitive drag-and-drop component connections and agent prompt configuration, democratizing AI application development without requiring programming expertise"
+            desc: [
+              "Engineered no-code agent platform for building RAG-based applications",
+              "Enabled intuitive drag-and-drop component connections and agent prompt configuration",
+              "Democratized AI application development without requiring programming expertise"
+            ]
           },
           {
             name: "Photo Wizard",
-            desc: "Built an AI-powered photo editing tool that automates background replacement, intelligent cropping, and standards compliance checks (dimensions, aspect ratio, face visibility, background rules). Enabled prompt-driven edits where users specify requirements in natural language and the system performs end-to-end transformations without manual intervention, accelerating compliant photo generation for IDs, visas, and profiles"
+            desc: [
+              "Built AI-powered photo editing tool for background replacement and intelligent cropping",
+              "Implemented standards compliance checks (dimensions, aspect ratio, face visibility, background rules)",
+              "Enabled prompt-driven edits with natural language specification",
+              "Automated end-to-end transformations without manual intervention",
+              "Accelerated compliant photo generation for IDs, visas, and profiles"
+            ]
           }
         ]
       }
@@ -93,7 +116,13 @@ const Portfolio = () => {
       period: "July - November 2022",
       role: "Researcher",
       project: "Self Defense and Safety Monitoring System",
-      description: "The paper discusses an advanced smart safety device for rapid security, addressing limitations in existing solutions. Designed a user-friendly interface device with automatic responses, emphasizing quick activation in emergencies. Integrated automatic response mechanisms to ensure quick activation and real-time reaction in critical situations. Implemented AI-powered emotion recognition system using machine learning algorithms to analyze voice patterns and pulse sensor data for automatic threat detection without manual activation.",
+      description: [
+        "Discussed advanced smart safety device for rapid security, addressing limitations in existing solutions",
+        "Designed user-friendly interface device with automatic responses, emphasizing quick activation in emergencies",
+        "Integrated automatic response mechanisms to ensure quick activation and real-time reaction in critical situations",
+        "Implemented AI-powered emotion recognition system using machine learning algorithms",
+        "Analyzed voice patterns and pulse sensor data for automatic threat detection without manual activation"
+      ],
       publication: "Published at 4th International Conference on Advances in Computing, Communication Control and Networking (ICAC3N), March 2023"
     },
     education: [
@@ -129,76 +158,154 @@ const Portfolio = () => {
       {
         name: "LegalLens AI",
         period: "May - July 2024",
-        desc: "Implemented a RAG pipeline for document processing and intelligent retrieval using LangChain and LangGraph. Integrated Meta's LLaMA-2 (4B) model for accurate summarization and legal text generation. Enabled users to upload legal files, ask questions, and create custom legal documents reducing manual effort and improving efficiency. Built a complete RAG pipeline with LangChain document processing, FAISS vector database for semantic search, and LangGraph workflow orchestration. Fine-tuned LLaMA-2 using LoRA for legal text generation and implemented FastAPI endpoints with OCR integration."
+        desc: [
+          "Implemented RAG pipeline for document processing and intelligent retrieval using LangChain and LangGraph",
+          "Integrated Meta's LLaMA-2 (4B) model for accurate summarization and legal text generation",
+          "Enabled users to upload legal files, ask questions, and create custom legal documents",
+          "Built complete RAG pipeline with FAISS vector database for semantic search",
+          "Fine-tuned LLaMA-2 using LoRA for legal text generation",
+          "Implemented FastAPI endpoints with OCR integration"
+        ]
       },
       {
         name: "Cuisine Quest",
         period: "March - April 2024",
-        desc: "Developed a location-based restaurant recommendation web application using Flask, MySQL, and scikit-learn's BallTree algorithm for efficient geospatial queries. Implemented machine learning-powered nearest neighbour search using Haversine distance metric to find restaurants within user-specified radius with O(log n) time complexity. Built secure user authentication system with MySQL database integration for managing user accounts and restaurant data with real-time processing capabilities. Engineered spatial indexing optimization using BallTree data structure with leaf_size tuning, enabling scalable geographic coordinate processing for large datasets."
+        desc: [
+          "Developed location-based restaurant recommendation web application using Flask and MySQL",
+          "Implemented machine learning-powered nearest neighbour search using Haversine distance metric",
+          "Built secure user authentication system with MySQL database integration",
+          "Engineered spatial indexing optimization using BallTree data structure with leaf_size tuning",
+          "Enabled scalable geographic coordinate processing for large datasets with O(log n) time complexity"
+        ]
       },
       {
         name: "Hyper-personalized Recommender System",
         period: "April - June 2023",
-        desc: "Enhanced tailored user recommendations using Reinforcement Learning techniques. Evaluated and selected the most accurate recommender model, subsequently fine-tuning and optimizing it to improve recommendation quality and user accuracy. Implemented and optimized reinforcement learning algorithms to create a personalized recommendation engine, evaluating multiple models to achieve the highest accuracy for tailored user suggestions."
+        desc: [
+          "Enhanced tailored user recommendations using Reinforcement Learning techniques",
+          "Evaluated and selected the most accurate recommender model",
+          "Fine-tuned and optimized model to improve recommendation quality and user accuracy",
+          "Implemented reinforcement learning algorithms for personalized recommendation engine"
+        ]
       },
       {
         name: "News Category Classifier Using NLP",
         period: "January - March 2023",
-        desc: "Constructed a potent text summarization model for extracting vital information from extensive text datasets. Utilized LSTM and RNN techniques to build the model and developed a robust news categorization system that automatically categorizes news articles into distinct categories. Built bidirectional LSTM networks with attention mechanisms for text processing. Implemented comprehensive preprocessing pipeline with spaCy NER, TF-IDF vectorization, and Word2Vec embeddings for multi-class classification across 10+ news categories."
+        desc: [
+          "Constructed potent text summarization model for extracting vital information from extensive text datasets",
+          "Utilized LSTM and RNN techniques to build the model",
+          "Developed robust news categorization system for automatic article classification",
+          "Built bidirectional LSTM networks with attention mechanisms for text processing",
+          "Implemented comprehensive preprocessing pipeline with spaCy NER, TF-IDF vectorization, and Word2Vec embeddings",
+          "Achieved multi-class classification across 10+ news categories"
+        ]
       },
       {
         name: "Predictive Healthcare Analytics for Cardiovascular Disease Detection",
         period: "November - December 2022",
-        desc: "Developed a machine learning classification model to predict heart disease using clinical patient data with 303 records and 13 medical features including blood pressure, cholesterol, and ECG results. Implemented Random Forest Classifier with feature selection techniques (RFE and RFECV) to optimize model performance and reduce dimensionality. Applied Recursive Feature Elimination with Cross-Validation (RFECV) using 7-fold CV to automatically select optimal features, improving accuracy from 67.2% to 86.9%. Achieved 86.9% classification accuracy on test data, demonstrating effective feature engineering and model optimization for healthcare applications."
+        desc: [
+          "Developed machine learning classification model to predict heart disease using clinical patient data",
+          "Implemented Random Forest Classifier with feature selection techniques (RFE and RFECV)",
+          "Applied Recursive Feature Elimination with Cross-Validation (RFECV) using 7-fold CV",
+          "Automatically selected optimal features, improving accuracy from 67.2% to 86.9%",
+          "Achieved 86.9% classification accuracy on test data",
+          "Demonstrated effective feature engineering and model optimization for healthcare applications"
+        ]
       }
     ],
     internships: [
       {
         company: "Navikenz, Bangalore",
         period: "January - July 2024",
-        desc: "Engaged in diverse projects involving Python programming, data science methodologies, and database management, applying practical skills to solve real-world problems. Gained hands-on experience in web development (HTML, CSS, JavaScript) and worked with cloud technologies on the Microsoft Azure platform, contributing to scalable and modern application solutions."
+        desc: [
+          "Engaged in diverse projects involving Python programming, data science methodologies, and database management",
+          "Applied practical skills to solve real-world problems",
+          "Gained hands-on experience in web development (HTML, CSS, JavaScript)",
+          "Worked with cloud technologies on Microsoft Azure platform",
+          "Contributed to scalable and modern application solutions"
+        ]
       },
       {
         company: "Suvidha Foundation",
         period: "February - March 2023",
-        desc: "Developed an advanced NLP text summarization model using state-of-the-art techniques to extract key information from extensive text data. Improved text comprehension and information retrieval through concise and meaningful content summaries."
+        desc: [
+          "Developed advanced NLP text summarization model using state-of-the-art techniques",
+          "Extracted key information from extensive text data",
+          "Improved text comprehension and information retrieval through concise and meaningful content summaries"
+        ]
       },
       {
         company: "Intrainz Edutech",
         period: "November 2022 - January 2023",
-        desc: "Implemented PCA on heart disease dataset during one-month industry training, reducing 13 features to 8 components with 96% accuracy. Applied PCA feature extraction techniques on 297 patient records, achieving 93% testing accuracy in cardiovascular risk prediction. Executed dimensionality reduction using PCA, optimizing model performance by 38% while preserving 95% data variance. Completed intensive one-month ML industry training covering Python, TensorFlow, and scikit-learn with hands-on project implementation."
+        desc: [
+          "Implemented PCA on heart disease dataset during one-month industry training",
+          "Reduced 13 features to 8 components with 96% accuracy",
+          "Applied PCA feature extraction techniques on 297 patient records",
+          "Achieved 93% testing accuracy in cardiovascular risk prediction",
+          "Executed dimensionality reduction using PCA, optimizing model performance by 38%",
+          "Completed intensive one-month ML industry training covering Python, TensorFlow, and scikit-learn"
+        ]
       }
     ],
     certifications: [
       {
         name: "AI Practitioner - AWS",
         year: "2025",
-        desc: "Demonstrated proficiency in AWS AI/ML services including SageMaker, Bedrock, and Comprehend. Applied machine learning workflows for model training, deployment, and monitoring on AWS infrastructure. Implemented generative AI solutions using AWS Bedrock foundation models. Designed scalable AI architectures leveraging Lambda, EC2, and containerized deployments. Validated expertise in responsible AI practices and governance frameworks."
+        desc: [
+          "Demonstrated proficiency in AWS AI/ML services including SageMaker, Bedrock, and Comprehend",
+          "Applied machine learning workflows for model training, deployment, and monitoring on AWS infrastructure",
+          "Implemented generative AI solutions using AWS Bedrock foundation models",
+          "Designed scalable AI architectures leveraging Lambda, EC2, and containerized deployments",
+          "Validated expertise in responsible AI practices and governance frameworks"
+        ]
       },
       {
         name: "Microsoft Azure AI Fundamentals",
         year: "2024",
-        desc: "Gained foundational knowledge of Azure Cognitive Services for vision, speech, and language processing. Explored machine learning concepts using Azure Machine Learning Studio. Understood conversational AI development with Azure Bot Framework. Learned computer vision applications through Azure Computer Vision and Custom Vision services. Demonstrated knowledge of responsible AI principles and ethical considerations in AI development."
+        desc: [
+          "Gained foundational knowledge of Azure Cognitive Services for vision, speech, and language processing",
+          "Explored machine learning concepts using Azure Machine Learning Studio",
+          "Understood conversational AI development with Azure Bot Framework",
+          "Learned computer vision applications through Azure Computer Vision and Custom Vision services",
+          "Demonstrated knowledge of responsible AI principles and ethical considerations"
+        ]
       },
       {
         name: "Robotics Workshop - Jain University",
         year: "2024",
-        desc: "Learned fundamental robotics concepts and gained hands-on experience with IoT integration using Raspberry Pi microcontroller for embedded system development. Built a functional remote-controlled car from scratch using robotic chassis, DC motors, and basic electronic components with proper circuit design and wiring. Implemented wireless communication protocols by integrating both Bluetooth and WiFi modules for dual-mode remote control capabilities. Gained practical experience in Python programming on Raspberry Pi platform for GPIO pin control, motor driver functions, and wireless data communication. Developed understanding of IoT fundamentals including sensor integration, wireless protocols, and real-time command processing for robotic vehicle control systems."
+        desc: [
+          "Learned fundamental robotics concepts and gained hands-on experience with IoT integration",
+          "Used Raspberry Pi microcontroller for embedded system development",
+          "Built functional remote-controlled car from scratch with proper circuit design and wiring",
+          "Implemented wireless communication protocols (Bluetooth and WiFi modules)",
+          "Gained practical experience in Python programming on Raspberry Pi platform",
+          "Developed understanding of IoT fundamentals including sensor integration and wireless protocols"
+        ]
       },
       {
         name: "Google Developer Students Club Workshop",
         year: "2023",
-        desc: "Learned to implement and deploy language models using Google Cloud technologies and gained foundational understanding of cloud-based AI development. Gained hands-on experience with Google Cloud's AI/ML services including basic model training, data processing, and API integration. Explored Google Cloud's pre-trained AI APIs for natural language processing, speech recognition, image analysis, and translation to build simple AI applications. Practiced building introductory machine learning projects using Google Cloud's comprehensive AI framework. Developed understanding of Google Cloud's scalable infrastructure for basic data analysis and learned to implement simple predictive analytics using machine learning models."
+        desc: [
+          "Learned to implement and deploy language models using Google Cloud technologies",
+          "Gained hands-on experience with Google Cloud's AI/ML services",
+          "Explored Google Cloud's pre-trained AI APIs for NLP, speech recognition, image analysis, and translation",
+          "Practiced building introductory machine learning projects using Google Cloud's AI framework",
+          "Developed understanding of Google Cloud's scalable infrastructure for data analysis"
+        ]
       },
       {
         name: "Supervised Learning with Scikit-Learn - Coursera",
         year: "2023",
-        desc: "Earned certification in Supervised Learning with Scikit-Learn from Coursera."
+        desc: [
+          "Earned certification in Supervised Learning with Scikit-Learn from Coursera"
+        ]
       },
       {
         name: "Creating Machine Learning Models with Microsoft Azure",
         year: "2023",
-        desc: "Awarded certificate in Creating Machine Learning Models with Microsoft Azure from Microsoft."
+        desc: [
+          "Awarded certificate in Creating Machine Learning Models with Microsoft Azure from Microsoft"
+        ]
       }
     ],
     achievements: [
@@ -213,31 +320,49 @@ const Portfolio = () => {
         role: "Team Collaborator",
         organization: "Cross-functional AI development teams, Navikenz",
         period: "2024 - Present",
-        desc: "Coordinated between development team and data science research teams for GenAI solution implementation. Facilitated knowledge sharing and technical discussions within the departments."
+        desc: [
+          "Coordinated between development team and data science research teams for GenAI solution implementation",
+          "Facilitated knowledge sharing and technical discussions within the departments"
+        ]
       },
       {
         role: "Volunteer",
         organization: "Suvidha Foundation, Nagpur",
         period: "2023",
-        desc: "Collected funds for educational development programs to support infrastructure improvements and learning resource accessibility for disadvantaged communities. Carried out group discussion sessions on new cutting-edge technology for awareness, helping community members understand and adapt to emerging technological advancements."
+        desc: [
+          "Collected funds for educational development programs to support infrastructure improvements",
+          "Improved learning resource accessibility for disadvantaged communities",
+          "Carried out group discussion sessions on new cutting-edge technology for awareness",
+          "Helped community members understand and adapt to emerging technological advancements"
+        ]
       },
       {
         role: "Research Contributor",
         organization: "Academic research projects, Jain University",
         period: "2022",
-        desc: "Led research methodology and implementation for safety monitoring system publication. Collaborated with faculty advisors on ICAC3N conference paper preparation."
+        desc: [
+          "Led research methodology and implementation for safety monitoring system publication",
+          "Collaborated with faculty advisors on ICAC3N conference paper preparation"
+        ]
       },
       {
         role: "Team Lead",
         organization: "College Major Projects, Jain Deemed to be University",
         period: "2021-2024",
-        desc: "Managed project timelines and resource allocation for multiple AI/ML academic projects. Mentored team members on technical implementation and problem-solving approaches."
+        desc: [
+          "Managed project timelines and resource allocation for multiple AI/ML academic projects",
+          "Mentored team members on technical implementation and problem-solving approaches"
+        ]
       },
       {
         role: "Community Participant",
         organization: "AI/ML Community",
         period: "2020 - Present",
-        desc: "Active participant in AI/ML community discussions and knowledge sharing. Continuous learner with passion for emerging technologies in artificial intelligence. Self-motivated problem solver with analytical thinking approach."
+        desc: [
+          "Active participant in AI/ML community discussions and knowledge sharing",
+          "Continuous learner with passion for emerging technologies in artificial intelligence",
+          "Self-motivated problem solver with analytical thinking approach"
+        ]
       }
     ]
   };
@@ -345,9 +470,14 @@ const Portfolio = () => {
               About Me
             </h2>
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-500">
-              <p className="text-gray-100 text-lg md:text-xl leading-relaxed mb-8 text-center">
-                {resumeData.about}
-              </p>
+              <ul className="space-y-4 mb-8">
+                {resumeData.about.map((point, i) => (
+                  <li key={i} className="text-gray-100 text-lg md:text-xl leading-relaxed flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
               <StaggeredItems className="grid md:grid-cols-2 gap-8">
                 <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 rounded-2xl p-6 border border-blue-400/40 transform hover:scale-105 transition-all duration-300">
                   <h3 className="text-xl md:text-2xl font-semibold text-blue-300 mb-4 flex items-center gap-3">
@@ -454,7 +584,14 @@ const Portfolio = () => {
                             <Code size={18} className="text-blue-400" />
                             {project.name}
                           </h5>
-                          <p className="text-gray-300 text-sm leading-relaxed">{project.desc}</p>
+                          <ul className="space-y-2">
+                            {project.desc.map((point, k) => (
+                              <li key={k} className="text-gray-300 text-sm leading-relaxed flex items-start gap-2">
+                                <span className="text-cyan-400 mt-1 text-xs flex-shrink-0">•</span>
+                                <span>{point}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       ))}
                     </div>
@@ -483,7 +620,14 @@ const Portfolio = () => {
                 </span>
               </div>
               <h4 className="text-xl md:text-2xl font-semibold text-blue-300 mb-6 text-center">{resumeData.research.project}</h4>
-              <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-8 text-center max-w-4xl mx-auto">{resumeData.research.description}</p>
+              <ul className="space-y-4 mb-8 max-w-4xl mx-auto">
+                {resumeData.research.description.map((point, i) => (
+                  <li key={i} className="text-gray-200 text-base md:text-lg leading-relaxed flex items-start gap-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-2xl p-6 border border-blue-400/40 text-center">
                 <p className="text-blue-200 text-sm md:text-base font-semibold flex items-center gap-3 justify-center">
                   <Award size={20} className="text-yellow-400" />
@@ -545,7 +689,14 @@ const Portfolio = () => {
                       {project.period}
                     </span>
                   </div>
-                  <p className="text-gray-200 text-sm md:text-base leading-relaxed">{project.desc}</p>
+                  <ul className="space-y-2">
+                    {project.desc.map((point, j) => (
+                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-2">
+                        <span className="text-blue-400 mt-1 text-xs flex-shrink-0">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </StaggeredItems>
@@ -575,7 +726,14 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  <p className="text-gray-200 text-sm md:text-base leading-relaxed">{internship.desc}</p>
+                  <ul className="space-y-3">
+                    {internship.desc.map((point, j) => (
+                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-3">
+                        <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </StaggeredItems>
@@ -632,7 +790,14 @@ const Portfolio = () => {
                       {cert.year}
                     </span>
                   </div>
-                  <p className="text-gray-200 text-sm leading-relaxed">{cert.desc}</p>
+                  <ul className="space-y-2">
+                    {cert.desc.map((point, j) => (
+                      <li key={j} className="text-gray-200 text-sm leading-relaxed flex items-start gap-2">
+                        <span className="text-green-400 mt-1 text-xs flex-shrink-0">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </StaggeredItems>
@@ -663,7 +828,14 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  <p className="text-gray-200 text-sm md:text-base leading-relaxed">{activity.desc}</p>
+                  <ul className="space-y-3">
+                    {activity.desc.map((point, j) => (
+                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-3">
+                        <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </StaggeredItems>
