@@ -413,41 +413,40 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-950 to-zinc-950 overflow-x-hidden">
       {/* Animated background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float top-0 left-0"></div>
-        <div className="absolute w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-delayed bottom-0 right-0"></div>
+        <div className="absolute w-96 h-96 bg-blue-900/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float top-0 left-0"></div>
+        <div className="absolute w-96 h-96 bg-indigo-900/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-delayed bottom-0 right-0"></div>
         <div className="stars"></div>
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className={`text-center z-10 px-4 transition-all duration-2000 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
+      <section className="min-h-screen flex items-center justify-center relative px-4">
+        <div className={`text-center z-10 w-full max-w-4xl transition-all duration-2000 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}`}>
           <div className="mb-6 animate-scale-in" style={{ animationDelay: '200ms' }}>
-            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-3xl md:text-4xl font-bold text-white shadow-2xl shadow-blue-500/50 border-2 border-blue-300/30 transform hover:scale-110 transition-transform duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-full flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold text-white shadow-2xl shadow-blue-500/50 border-2 border-blue-300/30 transform hover:scale-110 transition-transform duration-300">
               DD
             </div>
           </div>
-          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {resumeData.name}
           </h1>
-          <p className={`text-xl md:text-2xl lg:text-3xl text-blue-300 mb-8 font-light transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-300 mb-8 font-light transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             {resumeData.title}
           </p>
-          <div className={`flex flex-wrap justify-center gap-4 md:gap-8 text-gray-200 text-sm md:text-base transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-8 text-gray-200 text-xs sm:text-sm md:text-base transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-2 hover:text-blue-400 transition-all transform hover:scale-105">
-              <Mail size={18} />
-              <span className="hidden sm:inline">{resumeData.contact.email}</span>
+              <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
+              <span className="hidden sm:inline break-all">{resumeData.contact.email}</span>
               <span className="sm:hidden">Email</span>
             </a>
             <a href={`tel:${resumeData.contact.phone}`} className="flex items-center gap-2 hover:text-blue-400 transition-all transform hover:scale-105">
-              <Phone size={18} />
-              <span className="hidden sm:inline">{resumeData.contact.phone}</span>
-              <span className="sm:hidden">Phone</span>
+              <Phone size={16} className="sm:w-[18px] sm:h-[18px]" />
+              <span>{resumeData.contact.phone}</span>
             </a>
             <div className="flex items-center gap-2 hover:text-blue-400 transition-all transform hover:scale-105">
-              <MapPin size={18} />
+              <MapPin size={16} className="sm:w-[18px] sm:h-[18px]" />
               <span>{resumeData.contact.location}</span>
             </div>
           </div>
@@ -462,57 +461,57 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20">
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Users className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Users className="text-blue-400" size={24} />
               About Me
             </h2>
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-500">
-              <ul className="space-y-4 mb-8">
+            <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-500">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {resumeData.about.map((point, i) => (
-                  <li key={i} className="text-gray-100 text-lg md:text-xl leading-relaxed flex items-start gap-3">
+                  <li key={i} className="text-gray-100 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed flex items-start gap-2 sm:gap-3">
                     <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
                     <span>{point}</span>
                   </li>
                 ))}
               </ul>
-              <StaggeredItems className="grid md:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 rounded-2xl p-6 border border-blue-400/40 transform hover:scale-105 transition-all duration-300">
-                  <h3 className="text-xl md:text-2xl font-semibold text-blue-300 mb-4 flex items-center gap-3">
-                    <Trophy size={24} />
+              <StaggeredItems className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-400/30 transform hover:scale-105 transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-300 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                    <Trophy size={20} />
                     Key Achievements
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {resumeData.achievements.map((achievement, i) => (
-                      <li key={i} className="text-gray-200 text-sm md:text-base flex items-start gap-3">
-                        <Rocket size={16} className="text-blue-400 mt-1 flex-shrink-0" />
+                      <li key={i} className="text-gray-200 text-xs sm:text-sm md:text-base flex items-start gap-2 sm:gap-3">
+                        <Rocket size={14} className="text-blue-400 mt-1 flex-shrink-0 sm:w-4 sm:h-4" />
                         <span>{achievement}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 rounded-2xl p-6 border border-indigo-400/40 transform hover:scale-105 transition-all duration-300">
-                  <h3 className="text-xl md:text-2xl font-semibold text-indigo-300 mb-4 flex items-center gap-3">
-                    <Target size={24} />
+                <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-indigo-400/30 transform hover:scale-105 transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-indigo-300 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                    <Target size={20} />
                     Professional Summary
                   </h3>
-                  <ul className="space-y-3 text-gray-200 text-sm md:text-base">
-                    <li className="flex items-start gap-3">
-                      <ExternalLink size={16} className="text-indigo-400 mt-1 flex-shrink-0" />
+                  <ul className="space-y-2 sm:space-y-3 text-gray-200 text-xs sm:text-sm md:text-base">
+                    <li className="flex items-start gap-2 sm:gap-3">
+                      <ExternalLink size={14} className="text-indigo-400 mt-1 flex-shrink-0 sm:w-4 sm:h-4" />
                       Current: Software Engineer at Navikenz
                     </li>
-                    <li className="flex items-start gap-3">
-                      <ExternalLink size={16} className="text-indigo-400 mt-1 flex-shrink-0" />
+                    <li className="flex items-start gap-2 sm:gap-3">
+                      <ExternalLink size={14} className="text-indigo-400 mt-1 flex-shrink-0 sm:w-4 sm:h-4" />
                       Expertise: GenAI, RAG Systems, NLP
                     </li>
-                    <li className="flex items-start gap-3">
-                      <ExternalLink size={16} className="text-indigo-400 mt-1 flex-shrink-0" />
+                    <li className="flex items-start gap-2 sm:gap-3">
+                      <ExternalLink size={14} className="text-indigo-400 mt-1 flex-shrink-0 sm:w-4 sm:h-4" />
                       Education: BTech CSE (CGPA 8.7/10)
                     </li>
-                    <li className="flex items-start gap-3">
-                      <ExternalLink size={16} className="text-indigo-400 mt-1 flex-shrink-0" />
+                    <li className="flex items-start gap-2 sm:gap-3">
+                      <ExternalLink size={14} className="text-indigo-400 mt-1 flex-shrink-0 sm:w-4 sm:h-4" />
                       Published Research at ICAC3N 2023
                     </li>
                   </ul>
@@ -524,33 +523,33 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Experience Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={200}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={200}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Briefcase className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Briefcase className="text-blue-400" size={24} />
               Professional Experience
             </h2>
             {resumeData.experience.map((exp, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-500">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{exp.role}</h3>
-                  <p className="text-blue-300 text-lg md:text-xl mb-4">{exp.company}</p>
-                  <span className="text-gray-300 bg-gradient-to-r from-blue-600/40 to-indigo-600/40 px-6 py-2 rounded-full text-sm border border-blue-400/30">
+              <div key={i} className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-500">
+                <div className="text-center mb-6 sm:mb-8">
+                  <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-2">{exp.role}</h3>
+                  <p className="text-blue-300 text-base sm:text-lg md:text-xl mb-3 sm:mb-4">{exp.company}</p>
+                  <span className="text-gray-300 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm border border-blue-400/20 inline-block">
                     {exp.period}
                   </span>
                 </div>
                 
-                <StaggeredItems className="space-y-8">
+                <StaggeredItems className="space-y-6 sm:space-y-8">
                   <div>
-                    <h4 className="text-lg md:text-xl font-semibold text-blue-300 mb-4 flex items-center gap-3 justify-center">
-                      <Trophy size={20} />
+                    <h4 className="text-base sm:text-lg md:text-xl font-semibold text-blue-300 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3 justify-center">
+                      <Trophy size={18} />
                       Key Achievements
                     </h4>
-                    <ul className="grid md:grid-cols-2 gap-4">
+                    <ul className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                       {exp.achievements.map((achievement, j) => (
-                        <li key={j} className="text-gray-200 text-sm md:text-base flex items-start gap-3 bg-blue-600/20 rounded-xl p-4">
-                          <span className="text-blue-400 mt-1">▸</span>
+                        <li key={j} className="text-gray-200 text-xs sm:text-sm md:text-base flex items-start gap-2 sm:gap-3 bg-blue-600/10 rounded-xl p-3 sm:p-4">
+                          <span className="text-blue-400 mt-1 flex-shrink-0">▸</span>
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -558,14 +557,14 @@ const Portfolio = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-lg md:text-xl font-semibold text-indigo-300 mb-4 flex items-center gap-3 justify-center">
-                      <Target size={20} />
+                    <h4 className="text-base sm:text-lg md:text-xl font-semibold text-indigo-300 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3 justify-center">
+                      <Target size={18} />
                       Key Responsibilities
                     </h4>
-                    <ul className="space-y-4">
+                    <ul className="space-y-3 sm:space-y-4">
                       {exp.responsibilities.map((resp, j) => (
-                        <li key={j} className="text-gray-200 text-sm md:text-base flex items-start gap-3 bg-indigo-600/20 rounded-xl p-4">
-                          <span className="text-indigo-400 mt-1">▸</span>
+                        <li key={j} className="text-gray-200 text-xs sm:text-sm md:text-base flex items-start gap-2 sm:gap-3 bg-indigo-600/10 rounded-xl p-3 sm:p-4">
+                          <span className="text-indigo-400 mt-1 flex-shrink-0">▸</span>
                           <span>{resp}</span>
                         </li>
                       ))}
@@ -573,20 +572,20 @@ const Portfolio = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-lg md:text-xl font-semibold text-cyan-300 mb-4 flex items-center gap-3 justify-center">
-                      <Rocket size={20} />
+                    <h4 className="text-base sm:text-lg md:text-xl font-semibold text-cyan-300 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3 justify-center">
+                      <Rocket size={18} />
                       Featured Projects
                     </h4>
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       {exp.projects.map((project, j) => (
-                        <div key={j} className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-2xl p-6 border border-blue-500/40 transform hover:scale-105 transition-all duration-300">
-                          <h5 className="font-semibold text-white text-lg mb-3 flex items-center gap-2">
-                            <Code size={18} className="text-blue-400" />
-                            {project.name}
+                        <div key={j} className="bg-gradient-to-br from-blue-600/10 to-indigo-600/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-500/30 transform hover:scale-105 transition-all duration-300">
+                          <h5 className="font-semibold text-white text-base sm:text-lg mb-2 sm:mb-3 flex items-center gap-2">
+                            <Code size={16} className="text-blue-400 flex-shrink-0" />
+                            <span className="break-words">{project.name}</span>
                           </h5>
-                          <ul className="space-y-2">
+                          <ul className="space-y-1.5 sm:space-y-2">
                             {project.desc.map((point, k) => (
-                              <li key={k} className="text-gray-300 text-sm leading-relaxed flex items-start gap-2">
+                              <li key={k} className="text-gray-300 text-xs sm:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
                                 <span className="text-cyan-400 mt-1 text-xs flex-shrink-0">•</span>
                                 <span>{point}</span>
                               </li>
@@ -604,34 +603,34 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Research Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={400}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={400}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <BookOpen className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <BookOpen className="text-blue-400" size={24} />
               Research Experience
             </h2>
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-500">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">{resumeData.research.role}</h3>
-                <p className="text-blue-300 text-lg md:text-xl mb-4">{resumeData.research.institution}</p>
-                <span className="text-gray-300 bg-gradient-to-r from-blue-600/40 to-indigo-600/40 px-6 py-2 rounded-full text-sm border border-blue-400/30">
+            <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-500">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-white mb-2">{resumeData.research.role}</h3>
+                <p className="text-blue-300 text-base sm:text-lg md:text-xl mb-3 sm:mb-4">{resumeData.research.institution}</p>
+                <span className="text-gray-300 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm border border-blue-400/20 inline-block">
                   {resumeData.research.period}
                 </span>
               </div>
-              <h4 className="text-xl md:text-2xl font-semibold text-blue-300 mb-6 text-center">{resumeData.research.project}</h4>
-              <ul className="space-y-4 mb-8 max-w-4xl mx-auto">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-300 mb-4 sm:mb-6 text-center">{resumeData.research.project}</h4>
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 max-w-4xl mx-auto">
                 {resumeData.research.description.map((point, i) => (
-                  <li key={i} className="text-gray-200 text-base md:text-lg leading-relaxed flex items-start gap-3">
+                  <li key={i} className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed flex items-start gap-2 sm:gap-3">
                     <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
                     <span>{point}</span>
                   </li>
                 ))}
               </ul>
-              <div className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 rounded-2xl p-6 border border-blue-400/40 text-center">
-                <p className="text-blue-200 text-sm md:text-base font-semibold flex items-center gap-3 justify-center">
-                  <Award size={20} className="text-yellow-400" />
-                  {resumeData.research.publication}
+              <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-400/30 text-center">
+                <p className="text-blue-200 text-xs sm:text-sm md:text-base font-semibold flex flex-col sm:flex-row items-center gap-2 sm:gap-3 justify-center">
+                  <Award size={18} className="text-yellow-400 flex-shrink-0" />
+                  <span>{resumeData.research.publication}</span>
                 </p>
               </div>
             </div>
@@ -640,26 +639,26 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Education Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={300}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={300}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <GraduationCap className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <GraduationCap className="text-blue-400" size={24} />
               Education
             </h2>
-            <StaggeredItems className="space-y-6">
+            <StaggeredItems className="space-y-4 sm:space-y-6">
               {resumeData.education.map((edu, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                <div key={i} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="flex flex-col gap-4">
                     <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{edu.institution}</h3>
-                      <p className="text-blue-300 text-base md:text-lg mb-2">{edu.degree}</p>
-                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/40 to-indigo-600/40 px-4 py-1 rounded-full text-sm border border-blue-400/30 inline-block">
+                      <h3 className="text-base sm:text-xl md:text-2xl font-bold text-white mb-2">{edu.institution}</h3>
+                      <p className="text-blue-300 text-sm sm:text-base md:text-lg mb-2">{edu.degree}</p>
+                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm border border-blue-400/20 inline-block">
                         {edu.period}
                       </span>
                     </div>
-                    <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 rounded-xl p-4 border border-green-400/40 text-center md:min-w-[120px]">
-                      <p className="text-white text-lg md:text-xl font-bold">{edu.grade}</p>
+                    <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-xl p-3 sm:p-4 border border-green-400/30 text-center w-full sm:w-auto">
+                      <p className="text-white text-base sm:text-lg md:text-xl font-bold">{edu.grade}</p>
                     </div>
                   </div>
                 </div>
@@ -669,31 +668,31 @@ const Portfolio = () => {
         </div>
       </AnimatedSection>
 
-      {/* Projects Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={100}>
-        <div className="container mx-auto px-6 md:px-12">
+      {/* Projects Section - FIXED FOR MOBILE */}
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={100}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Code className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Code className="text-blue-400" size={24} />
               Academic Projects
             </h2>
-            <StaggeredItems className="grid sm:grid-cols-2 gap-8">
+            <StaggeredItems className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               {resumeData.projects.map((project, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/30 transform hover:scale-105 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg md:text-xl font-bold text-white flex items-center gap-2">
-                      <Rocket size={20} className="text-blue-400" />
-                      {project.name}
+                <div key={i} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-500/20 transform hover:scale-105 transition-all duration-300 w-full overflow-hidden">
+                  <div className="flex flex-col gap-3 mb-3 sm:mb-4">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white flex items-start gap-2 break-words">
+                      <Rocket size={18} className="text-blue-400 mt-1 flex-shrink-0" />
+                      <span>{project.name}</span>
                     </h3>
-                    <span className="text-xs text-gray-300 bg-blue-600/40 px-3 py-1 rounded-full border border-blue-400/30 whitespace-nowrap ml-4">
+                    <span className="text-xs text-gray-300 bg-blue-600/30 px-2 sm:px-3 py-1 rounded-full border border-blue-400/20 self-start">
                       {project.period}
                     </span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {project.desc.map((point, j) => (
-                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-2">
+                      <li key={j} className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-1.5 sm:gap-2 break-words">
                         <span className="text-blue-400 mt-1 text-xs flex-shrink-0">•</span>
-                        <span>{point}</span>
+                        <span className="break-words">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -705,30 +704,30 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Internships Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={200}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={200}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Building2 className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Building2 className="text-blue-400" size={24} />
               Internships
             </h2>
-            <StaggeredItems className="space-y-6">
+            <StaggeredItems className="space-y-4 sm:space-y-6">
               {resumeData.internships.map((internship, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
+                <div key={i} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="flex flex-col gap-3 sm:gap-4 mb-3 sm:mb-4">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-2">
-                        <Briefcase size={22} className="text-blue-400" />
-                        {internship.company}
+                      <h3 className="text-base sm:text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <Briefcase size={20} className="text-blue-400 flex-shrink-0" />
+                        <span>{internship.company}</span>
                       </h3>
-                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/40 to-indigo-600/40 px-4 py-1 rounded-full text-sm border border-blue-400/30 inline-block">
+                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm border border-blue-400/20 inline-block">
                         {internship.period}
                       </span>
                     </div>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {internship.desc.map((point, j) => (
-                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-3">
+                      <li key={j} className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-2 sm:gap-3">
                         <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
                         <span>{point}</span>
                       </li>
@@ -742,23 +741,23 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Skills Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={300}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={300}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Award className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Award className="text-blue-400" size={24} />
               Technical Skills
             </h2>
-            <StaggeredItems className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggeredItems className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {Object.entries(resumeData.skills).map(([category, skills]) => (
-                <div key={category} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/30 transform hover:scale-105 transition-all duration-300">
-                  <h3 className="text-base md:text-lg font-bold text-blue-300 mb-4 flex items-center gap-2">
-                    <Target size={18} />
-                    {category}
+                <div key={category} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-500/20 transform hover:scale-105 transition-all duration-300">
+                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-blue-300 mb-3 sm:mb-4 flex items-center gap-2">
+                    <Target size={16} className="flex-shrink-0" />
+                    <span>{category}</span>
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {skills.map((skill, j) => (
-                      <span key={j} className="bg-gradient-to-r from-blue-600/40 to-indigo-600/40 text-white px-3 py-1 rounded-full text-xs border border-blue-400/50 hover:scale-110 transition-transform duration-200">
+                      <span key={j} className="bg-gradient-to-r from-blue-600/30 to-indigo-600/30 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs border border-blue-400/40 hover:scale-110 transition-transform duration-200">
                         {skill}
                       </span>
                     ))}
@@ -771,28 +770,28 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Certifications Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={400}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={400}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Award className="text-blue-400" size={32} />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Award className="text-blue-400" size={24} />
               Training & Certifications
             </h2>
-            <StaggeredItems className="grid sm:grid-cols-2 gap-6">
+            <StaggeredItems className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               {resumeData.certifications.map((cert, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-blue-500/30 transform hover:scale-105 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-lg md:text-xl font-bold text-white flex items-center gap-2">
-                      <CheckCircle2 size={20} className="text-green-400" />
-                      {cert.name}
+                <div key={i} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-blue-500/20 transform hover:scale-105 transition-all duration-300">
+                  <div className="flex flex-col gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-white flex items-start gap-2 break-words">
+                      <CheckCircle2 size={18} className="text-green-400 mt-1 flex-shrink-0" />
+                      <span>{cert.name}</span>
                     </h3>
-                    <span className="text-xs text-gray-300 bg-blue-600/40 px-3 py-1 rounded-full border border-blue-400/30 whitespace-nowrap ml-2">
+                    <span className="text-xs text-gray-300 bg-blue-600/30 px-2 sm:px-3 py-1 rounded-full border border-blue-400/20 self-start">
                       {cert.year}
                     </span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {cert.desc.map((point, j) => (
-                      <li key={j} className="text-gray-200 text-sm leading-relaxed flex items-start gap-2">
+                      <li key={j} className="text-gray-200 text-xs sm:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
                         <span className="text-green-400 mt-1 text-xs flex-shrink-0">•</span>
                         <span>{point}</span>
                       </li>
@@ -806,31 +805,31 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Extracurricular Section */}
-      <AnimatedSection className="min-h-screen flex items-center py-20" delay={200}>
-        <div className="container mx-auto px-6 md:px-12">
+      <AnimatedSection className="min-h-screen flex items-center py-12 sm:py-16 md:py-20" delay={200}>
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 w-full">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 flex items-center gap-4 justify-center">
-              <Heart className="text-blue-400" size={32} />
-              Extracurricular Activities & Community Service
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 justify-center">
+              <Heart className="text-blue-400" size={24} />
+              Extracurricular Activities
             </h2>
-            <StaggeredItems className="space-y-6">
+            <StaggeredItems className="space-y-4 sm:space-y-6">
               {resumeData.extracurricular.map((activity, i) => (
-                <div key={i} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 md:p-8 border border-blue-500/30 transform hover:scale-[1.02] transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
+                <div key={i} className="bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-blue-500/20 transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="flex flex-col gap-3 sm:gap-4 mb-3 sm:mb-4">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-2">
-                        <Users size={22} className="text-blue-400" />
-                        {activity.role}
+                      <h3 className="text-base sm:text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                        <Users size={20} className="text-blue-400 flex-shrink-0" />
+                        <span>{activity.role}</span>
                       </h3>
-                      <p className="text-blue-300 text-base md:text-lg mb-2">{activity.organization}</p>
-                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/40 to-indigo-600/40 px-4 py-1 rounded-full text-sm border border-blue-400/30 inline-block">
+                      <p className="text-blue-300 text-sm sm:text-base md:text-lg mb-2">{activity.organization}</p>
+                      <span className="text-gray-300 bg-gradient-to-r from-blue-600/30 to-indigo-600/30 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm border border-blue-400/20 inline-block">
                         {activity.period}
                       </span>
                     </div>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {activity.desc.map((point, j) => (
-                      <li key={j} className="text-gray-200 text-sm md:text-base leading-relaxed flex items-start gap-3">
+                      <li key={j} className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-2 sm:gap-3">
                         <span className="text-blue-400 mt-1 flex-shrink-0">•</span>
                         <span>{point}</span>
                       </li>
@@ -844,19 +843,19 @@ const Portfolio = () => {
       </AnimatedSection>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-blue-950/95 backdrop-blur-xl border-t border-blue-500/30 py-8 md:py-12">
-        <div className="container mx-auto px-6 text-center">
+      <footer className="relative z-10 bg-gray-950/95 backdrop-blur-xl border-t border-blue-500/20 py-6 sm:py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <p className="text-gray-300 text-sm md:text-base mb-4">© 2025 {resumeData.name}. All rights reserved.</p>
-            <div className="flex justify-center gap-6">
+            <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-3 sm:mb-4">© 2025 {resumeData.name}. All rights reserved.</p>
+            <div className="flex justify-center gap-4 sm:gap-6">
               <a href={`mailto:${resumeData.contact.email}`} className="text-blue-400 hover:text-blue-300 transition-colors transform hover:scale-110">
-                <Mail size={24} />
+                <Mail size={20} className="sm:w-6 sm:h-6" />
               </a>
               <a href={`tel:${resumeData.contact.phone}`} className="text-blue-400 hover:text-blue-300 transition-colors transform hover:scale-110">
-                <Phone size={24} />
+                <Phone size={20} className="sm:w-6 sm:h-6" />
               </a>
               <div className="text-blue-400">
-                <MapPin size={24} />
+                <MapPin size={20} className="sm:w-6 sm:h-6" />
               </div>
             </div>
           </AnimatedSection>
@@ -897,7 +896,7 @@ const Portfolio = () => {
             radial-gradient(2px 2px at 90px 10px, white, transparent);
           background-repeat: repeat;
           background-size: 200px 200px;
-          opacity: 0.3;
+          opacity: 0.2;
           animation: float 100s infinite linear;
         }
       `}</style>
